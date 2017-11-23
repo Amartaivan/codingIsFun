@@ -12,12 +12,12 @@ So worst solution is find as linear. O(N)
 So this algo is implement by estimate half of unnecessary segments at once time. O(logN)
 
 Explaining:
-a0 a1 a2 a3 a4 ......... aM-1 aM aM+1 ......    aN-2 aN-1
+a[0] a[1] a[2] ... a[M-1] a[M] a[M+1] ......    a[N-2] a[N-1]
 
 step 1: 
     
     * choose M = (0 + (N - 1) )/ 2
-    * a0 - aM-1, aM+1 - aN-1       we will check aM element
+    * a[0] - a[M-1], a[M+1] - a[N-1]       we will check aM element
     * estimated array size = N / 2
 
 step 2:
@@ -39,13 +39,10 @@ step (logN)
 Maximium approach is step(logN), 
 Minimium approach is step(1).
 
-    a0 a1
+    a[0] a[1]
     size is 2
     M = (0 + 2 - 1) / 2 = 0
-    a0 - a(-1), a1 - a1, we will check a0
-
-
-
+    a[0] - a[-1], a[1] - a[1], we will check a[0]
 
 
 

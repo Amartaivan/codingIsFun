@@ -7,15 +7,17 @@ void sort(vector<int> &a) {
   // Preventing to call size function every iteration
   size_t n = a.size();
 
-  for (size_t i = 0; i < n; i++) {
-    for (size_t j = 0; j < n - i - 1; j++) {
-
-      if (a[j] < a[j + 1]) {
+  bool swapped;
+  do{
+    n--;
+    swapped = false;
+    for (size_t j = 0; j < n; j++) {
+      if (a[j] > a[j + 1]) {
         swap(a[j], a[j + 1]);
+        swapped = true;
       }
-      
     }
-  }
+  }while(swapped);
 
 }
 
